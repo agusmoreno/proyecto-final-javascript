@@ -1,12 +1,21 @@
+//classes
+class Song {
+    constructor(title, artist, danceability) {
+        this.title = title;
+        this.artist = artist;
+        this.danceability = parseFloat(danceability);
+    }
+}
+
 //fake data
-const songJazz1 = 0.335; //value danceability
-const songJazz2 = 0.225;
-const songJazz3 = 0.115;
+const songJazz1 = new Song("take five", "dave brubeck", "0.455");
+const songJazz2 = new Song("giant steps", "john coltrane", "0.525");
+const songJazz3 = new Song("confirmation", "charlie parker", "0.355");
 const playlistJazz = [songJazz1, songJazz2, songJazz3];
 
-const songCumbia1 = 1.0; //value danceability
-const songCumbia2 = 0.995;
-const songCumbia3 = 0.885;
+const songCumbia1 = new Song("paisaje", "gilda", "0.785");
+const songCumbia2 = new Song("no te creas tan importante", "damas gratis", "0.825");
+const songCumbia3 = new Song("una cerveza", "rafaga", "0.985");
 const playlistCumbia = [songCumbia1, songCumbia2, songCumbia3];
 
 //user input
@@ -39,7 +48,7 @@ function calculatePlaylistDanceabilityAverage(playlist) {
     let playlistAverage;
     let totalSum = 0.0;
     for (let i = 0; i < playlist.length; i++) {
-        totalSum = totalSum + playlist[i];
+        totalSum = totalSum + playlist[i].danceability;
     }
     playlistAverage = totalSum / playlist.length;
     return playlistAverage;
