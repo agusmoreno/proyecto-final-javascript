@@ -70,3 +70,10 @@ function calculatePlaylistDanceabilityAverage(playlist) {
 function alertAverage(average) {
     alert("Danceability promedio " + average);
 }
+
+//sort songs by danceability (high to low)
+songsJazz.sort(sortSongsByDanceability)
+function sortSongsByDanceability (songA, songB) {
+    return songB.danceability - songA.danceability
+}
+console.log(songsJazz);
