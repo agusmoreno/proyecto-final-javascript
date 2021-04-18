@@ -49,7 +49,7 @@ if (selectedPlaylist == "jazz") {
 }
 
 // output
-alertAverage(danceabilityAverage);
+document.getElementById("danceability-value").innerHTML = danceabilityAverage;
 
 
 // functions
@@ -67,6 +67,4 @@ function calculatePlaylistDanceabilityAverage(playlist) {
     return playlistAverage;
 }
 
-function alertAverage(average) {
-    alert("Danceability promedio " + average);
-}
+
