@@ -33,9 +33,9 @@ const playlistCumbia = new Playlist(songsCumbia, "Lu");
 
 //user input
 let sendButton = document.getElementById("send-button");
-sendButton.addEventListener("click", funcionQueRecibeUnEvento);
+sendButton.addEventListener("click", main);
 
-function funcionQueRecibeUnEvento(e) {
+function main() {
     let selectedPlaylist = document.getElementById("playlist-url").value
     // logic
     let danceabilityAverage;
