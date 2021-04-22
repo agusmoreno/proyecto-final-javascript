@@ -12,7 +12,7 @@ class Playlist {
         this.songs = songs;
         this.owner = owner;
     }
-    
+
     size() {
         return this.songs.length;
     }
@@ -32,30 +32,33 @@ const songsCumbia = [songCumbia1, songCumbia2, songCumbia3];
 const playlistCumbia = new Playlist(songsCumbia, "Lu");
 
 //user input
-let selectedPlaylist;
-selectedPlaylist = requestPlaylist();
+let sendButton = document.getElementById("send-button");
+sendButton.addEventListener("click", funcionQueRecibeUnEvento);
+
+function funcionQueRecibeUnEvento(e) {
+    let selectedPlaylist = document.getElementById("playlist-url").value
+    // logic
+    let danceabilityAverage;
+    if (selectedPlaylist == "jazz") {
+        danceabilityAverage = calculatePlaylistDanceabilityAverage(playlistJazz)
+    } else if (selectedPlaylist == "cumbia") {
+        danceabilityAverage = calculatePlaylistDanceabilityAverage(playlistCumbia);
+    }
+
+    // output
+    document.getElementById("danceability-value").innerHTML = danceabilityAverage;
+
+}
+/* selectedPlaylist = requestPlaylist();
 while (selectedPlaylist != "jazz" && selectedPlaylist != "cumbia") {
     alert("Ingresar uno de los valores disponibles");
     selectedPlaylist = requestPlaylist();
-}
-
-
-// logic
-let danceabilityAverage;
-if (selectedPlaylist == "jazz") {
-    danceabilityAverage = calculatePlaylistDanceabilityAverage(playlistJazz)
-} else if (selectedPlaylist == "cumbia") {
-    danceabilityAverage = calculatePlaylistDanceabilityAverage(playlistCumbia);
-}
-
-// output
-document.getElementById("danceability-value").innerHTML = danceabilityAverage;
-
+} */
 
 // functions
-function requestPlaylist() {
+/* function requestPlaylist() {
     return prompt("Elegi una de las playlist disponibles: \nJazz \nCumbia").toLowerCase();
-}
+} */
 
 function calculatePlaylistDanceabilityAverage(playlist) {
     let playlistAverage;
