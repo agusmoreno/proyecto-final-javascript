@@ -67,4 +67,4 @@ function calculatePlaylistDanceabilityAverage(playlist) {
     return playlistAverage;
 }
 
-
+document.getElementById("songs").innerHTML = JSON.stringify(songsJazz);
