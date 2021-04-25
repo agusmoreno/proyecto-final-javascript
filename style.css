@@ -1,0 +1,12 @@
+img {
+    width: 5rem;
+    height: 5rem;
+}
+body {
+    background: linear-gradient(114.01deg, #001687 17.06%, #7334FA 70.8%, #4D1C8C 112.59%);
+    color: #fff;
+    height: 100%;
+}
+html {
+    height: 100%;
+}
