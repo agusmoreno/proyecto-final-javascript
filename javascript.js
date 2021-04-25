@@ -67,4 +67,36 @@ function calculatePlaylistDanceabilityAverage(playlist) {
     return playlistAverage;
 }
 
-document.getElementById("songs").innerHTML = JSON.stringify(songsJazz);
+const targetNode = document.getElementById("songs");
+
+let jazzCard = "";
+
+for (let i=0; i < songsJazz.length;i++){
+
+    jazzCard +=
+
+     `<div>
+
+    <h3>Title: ${songsJazz[i].title}</h3>
+
+    <h4>Artist: ${songsJazz[i].artist}</h4>
+
+    <h4>Danceability: ${songsJazz[i].danceability}</h4>
+
+    </div>`;
+
+    
+
+}
+
+targetNode.innerHTML= jazzCard;
+
+let musicLengthNode = document.createElement("p");
+
+musicLengthNode.innerText = `playlist tracks: ${playlistJazz.size()}`
+
+musicLengthNode.setAttribute('style',"font-weight:bold;font-size:1.5em")
+
+
+
+targetNode.appendChild(musicLengthNode);
