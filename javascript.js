@@ -35,11 +35,13 @@ const songsCumbia = [songCumbia1, songCumbia2, songCumbia3];
 const playlistCumbia = fakeData[1];
 
 //user input
-let sendButton = document.getElementById("send-button");
-sendButton.addEventListener("click", main);
+/* let sendButton = document.getElementById("send-button");
+sendButton.addEventListener("click", main); */
+let sendButton = $("#send-button");
+$("#send-button").on ("click", main);
 
 function main() {
-    let selectedPlaylist = document.getElementById("playlist-url").value
+    let selectedPlaylist = $("#playlist-url").val()
     // logic
     let danceabilityAverage;
     if (selectedPlaylist == "jazz") {
@@ -49,8 +51,9 @@ function main() {
     }
 
     // output
-    document.getElementById("danceability-value").innerHTML = danceabilityAverage;
-    let previousValue = localStorage.getItem("historial-de-playlist");
+    
+    $("#danceability-value").html(danceabilityAverage);
+    /* let previousValue = localStorage.getItem("historial-de-playlist");
     console.log("El valor es: " + previousValue);
     if (previousValue != null && !previousValue.includes(selectedPlaylist)) {
         localStorage.setItem("historial-de-playlist", previousValue + "," + selectedPlaylist); 
@@ -60,28 +63,15 @@ function main() {
     let playlistHistory = localStorage.getItem("historial-de-playlist");
     let playlistHistoryList = playlistHistory.split(',');
     console.log(playlistHistoryList);
-    // document.getElementById("history").innerHTML = localStorage.getItem("historial-de-playlist");
     for (const playlist of playlistHistoryList) {
         let playlistLI = document.createElement("li");
         let playlistTextNode = document.createTextNode(playlist)
         playlistLI.appendChild(playlistTextNode);
         document.getElementById("history").appendChild(playlistLI);
 
-    }
+    } */
     
 }
-
-
-/* selectedPlaylist = requestPlaylist();
-while (selectedPlaylist != "jazz" && selectedPlaylist != "cumbia") {
-    alert("Ingresar uno de los valores disponibles");
-    selectedPlaylist = requestPlaylist();
-} */
-
-// functions
-/* function requestPlaylist() {
-    return prompt("Elegi una de las playlist disponibles: \nJazz \nCumbia").toLowerCase();
-} */
 
 function calculatePlaylistDanceabilityAverage(playlist) {
     let playlistAverage;

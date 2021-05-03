@@ -1,12 +1,33 @@
-img {
-    width: 5rem;
-    height: 5rem;
+.playlist-img {
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 20px;
+    margin: 1rem;
 }
 body {
     background: linear-gradient(114.01deg, #001687 17.06%, #7334FA 70.8%, #4D1C8C 112.59%);
     color: #fff;
     height: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 html {
     height: 100%;
+}
+.icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 20px;
+    padding: 1rem;
+    margin: 1rem;
+}
+.playlist-input {
+    margin: 1rem;
+    justify-content: center;
+}
+#send-button {
+    border-radius: 0px 10px 10px 0px;
+}
+#playlist-url {
+    border-radius: 10px 0px 0px 10px;
 }
