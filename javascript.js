@@ -53,6 +53,9 @@ function main() {
     // output
     
     $("#danceability-value").html(danceabilityAverage);
+    $("#danceability-value").slideUp(1000)
+                            .delay(5)
+                            .slideDown(2000);
     /* let previousValue = localStorage.getItem("historial-de-playlist");
     console.log("El valor es: " + previousValue);
     if (previousValue != null && !previousValue.includes(selectedPlaylist)) {
