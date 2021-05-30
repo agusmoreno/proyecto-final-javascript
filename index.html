@@ -8,36 +8,35 @@
     <title>Anatomify</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    
+
 </head>
 
 <body>
     <div>
-        <!-- <p>Ingresa una de las playlist disponibles</p>
-        <ul>
-            <li>Jazz</li>
-            <li>Cumbia</li>
-        </ul> -->
         <div class="container">
             <div class="row justify-content-lg-center">
                 <div class="col-lg-4 text-center playlist-input input-group mb-3 ">
-                        <input class="border border-light text-center" id="playlist-url" type="text" placeholder="Ingresa una playlist">
+                    <input class="border border-light text-center" id="playlist-url" type="text"
+                        placeholder="Ingresa una playlist">
                     <div class="input-group-append">
                         <input id="send-button" class="btn btn-outline-light" type="submit" value="Enviar">
                     </div>
                 </div>
             </div>
         </div>
-        <ul id="history">
-        </ul>
     </div>
     <div class="container">
         <div class="row justify-content-lg-center">
+            <div class="col-lg-4">
+                <button class="try-button btn btn-outline-light">Try a playlist</button>
+            </div>
             <div class="col-lg-4 text-center">
-                <img class="playlist-img" src="images/cover.png" alt="">
+                <img class="playlist-img" src="images/playlist-default.svg" alt="">
+            </div>
+            <div class="col-lg-4">
             </div>
         </div>
 
@@ -66,9 +65,9 @@
                 <div class="col-lg text-center">
                     <img class="icon" src="images/guitar.svg" alt="">
                     <div class="progress-bar-container">
-                    <div class="progress">
-                        <div class="progress-bar progress-bar-acousticness" role="progressbar"></div>
-                    </div>
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-acousticness" role="progressbar"></div>
+                        </div>
                     </div>
                     <p>Acousticness</p>
                     <p id="acousticness-value"></p>
@@ -79,7 +78,7 @@
                         <div class="progress">
                             <div class="progress-bar progress-bar-danceability" role="progressbar"></div>
                         </div>
-                        </div>
+                    </div>
                     <p>Danceability</p>
                     <p id="danceability-value"></p>
                 </div>
@@ -89,7 +88,7 @@
                         <div class="progress">
                             <div class="progress-bar progress-bar-energy" role="progressbar"></div>
                         </div>
-                        </div>
+                    </div>
                     <p>Energy</p>
                     <p id="energy-value"></p>
                 </div>
@@ -103,7 +102,7 @@
                         <div class="progress">
                             <div class="progress-bar progress-bar-speechiness" role="progressbar"></div>
                         </div>
-                        </div>
+                    </div>
                     <p>Speechiness</p>
                     <p id="speechiness-value"></p>
                 </div>
@@ -113,7 +112,7 @@
                         <div class="progress">
                             <div class="progress-bar progress-bar-liveness" role="progressbar"></div>
                         </div>
-                        </div>
+                    </div>
                     <p>Liveness</p>
                     <p id="liveness-value"></p>
                 </div>
@@ -123,7 +122,7 @@
                         <div class="progress">
                             <div class="progress-bar progress-bar-valence" role="progressbar"></div>
                         </div>
-                        </div>
+                    </div>
                     <p>Valence</p>
                     <p id="valence-value"></p>
                 </div>
@@ -133,7 +132,8 @@
     <!--  <div>Icons made by <a href="https://www.flaticon.com/authors/monkik" title="monkik">monkik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     <div>Icons made by <a href="https://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
     <div>Icons made by <a href="https://www.flaticon.com/authors/pixel-perfect" title="Pixel perfect">Pixel perfect</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="data.js"></script>
     <script src="config.js"></script>
     <script src="spotify.js"></script>
@@ -142,4 +142,5 @@
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
 </body>
+
 </html>
